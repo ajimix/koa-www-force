@@ -45,7 +45,7 @@ module.exports = function enforceWWW(options) {
     // If we trust host header and the hostname is localhost, then we use the
     // forwarded header
     if (host.includes('localhost') && options.trustHostHeader) {
-      host = ctx.request.header['x-forwarded-host'];
+      host = ctx.request.header['x-forwarded-host'] || host;
     }
 
     // Check if host has www or not
