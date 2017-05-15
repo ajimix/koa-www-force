@@ -1,0 +1,27 @@
+{
+  "name": "koa-www-force",
+  "version": "1.0.0",
+  "description": "Enforces www for node.js koa projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajimix/koa-www-force.git"
+  },
+  "keywords": [
+    "koa",
+    "koa.js",
+    "middleware",
+    "redirect",
+    "node",
+    "node.js"
+  ],
+  "author": "Adria Jimenez <ajimix@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajimix/koa-www-force/issues"
+  },
+  "homepage": "https://github.com/ajimix/koa-www-force#readme",
+  "devDependencies": {
+    "koa": "^2.2.0"
+  }
+}
