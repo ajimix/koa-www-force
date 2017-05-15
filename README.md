@@ -32,7 +32,7 @@ $ npm install koa-www-force
 Heroku, nodejitsu and other hosters often use reverse proxies which offer SSL endpoints but then forward unencrypted HTTP traffic to the website. This makes it difficult to detect if the original host came with or without www. Luckily, most reverse proxies set the `x-forwarded-host` header flag with the original request scheme. koa-www-force is ready for such scenarios, but you have to specifically request the evaluation of this flag:
 
 ```javascript
-app.use(enforceHttps({
+app.use(enforceWWW({
   trustHostHeader: true
 }))
 ```
