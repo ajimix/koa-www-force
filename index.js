@@ -51,15 +51,15 @@ module.exports = function enforceWWW(options) {
     // Check if host has www or not
     const hasWWW = host.substr(0, 4) === 'www.';
 
-    if ((hasWWW && options.enforceWWW) ||
-        (!hasWWW && !options.enforceWWW) ||
+    if ((hasWWW && options.www) ||
+        (!hasWWW && !options.www) ||
         host === 'localhost' // If we are here and still is localhost, we assume
                              // is development environment
       ){
       return next();
     }
 
-    if (hasWWW && !options.enforceWWW) {
+    if (hasWWW && !options.www) {
       host = host.substr(4);
     } else {
       host = 'www.' + host;
